@@ -1,0 +1,40 @@
+---
+interface Service {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+const services: Service[] = [
+  {
+    title: "Développement Web",
+    description: "Sites web modernes et performants adaptés à vos besoins",
+    icon: "🌐"
+  },
+  {
+    title: "Applications Mobile",
+    description: "Applications natives et cross-platform pour iOS et Android",
+    icon: "📱"
+  },
+  {
+    title: "Design UI/UX",
+    description: "Interfaces utilisateur intuitives et expériences utilisateur optimisées",
+    icon: "🎨"
+  }
+];
+---
+
+<section class="py-20 bg-box" id="services">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-primary text-center mb-12">Nos Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {services.map(service => (
+        <div class="p-6 rounded-lg bg-bg hover:shadow-lg transition-shadow">
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="text-xl font-semibold mb-2 text-heading-1">{service.title}</h3>
+          <p class="text-heading-2">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
