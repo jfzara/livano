@@ -15,12 +15,12 @@
   }
 
   .dark {
-    --color-bg: 3 7 18;
-    --color-box: 17 24 39;
-    --box-border: 243 244 246/0.1;
+    --color-bg: 17 24 39;
+    --color-box: 31 41 55;
+    --box-border: 55 65 81;
     --box-sd: transparent;
     --heading-1: 255 255 255;
-    --heading-2: 243 244 246;
+    --heading-2: 229 231 235;
     --heading-3: 209 213 219;
   }
 
@@ -30,5 +30,6 @@
 
   body {
     font-family: "Raleway", sans-serif;
+    @apply transition-colors duration-300;
   }
 }

@@ -7,32 +7,32 @@ interface Service {
 
 const services: Service[] = [
   {
-    title: "Développement Web",
-    description: "Sites web modernes et performants adaptés à vos besoins",
+    title: "Lorem Ipsum",
+    description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
     icon: "🌐"
   },
   {
-    title: "Applications Mobile",
-    description: "Applications natives et cross-platform pour iOS et Android",
+    title: "Dolor Sit",
+    description: "Duis aute irure dolor in reprehenderit in voluptate velit",
     icon: "📱"
   },
   {
-    title: "Design UI/UX",
-    description: "Interfaces utilisateur intuitives et expériences utilisateur optimisées",
+    title: "Consectetur",
+    description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa",
     icon: "🎨"
   }
 ];
 ---
 
-<section class="py-20 bg-box" id="services">
+<section class="py-20 bg-box dark:bg-gray-800" id="services">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-primary text-center mb-12">Nos Services</h2>
+    <h2 class="text-3xl font-bold text-primary text-center mb-12 dark:text-white">Lorem Ipsum</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {services.map(service => (
-        <div class="p-6 rounded-lg bg-bg hover:shadow-lg transition-shadow">
+        <div class="p-6 rounded-lg bg-bg hover:shadow-lg transition-shadow dark:bg-gray-700">
           <div class="text-4xl mb-4">{service.icon}</div>
-          <h3 class="text-xl font-semibold mb-2 text-heading-1">{service.title}</h3>
-          <p class="text-heading-2">{service.description}</p>
+          <h3 class="text-xl font-semibold mb-2 text-heading-1 dark:text-white">{service.title}</h3>
+          <p class="text-heading-2 dark:text-gray-300">{service.description}</p>
         </div>
       ))}
     </div>

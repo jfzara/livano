@@ -19,12 +19,36 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script is:inline>
+      // Initialisation immédiate du thème pour éviter le flash
+      const theme = (() => {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      })();
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
   </head>
-  <body class="overflow-hidden overflow-y-auto bg-body">
+  <body class="overflow-hidden overflow-y-auto bg-body dark:bg-gray-900 transition-colors duration-300">
     <Header />
     <main class="flex flex-col overflow-hidden">
       <slot />
     </main>
     <Footer />
+    <script>
+      import { getThemePreference, setTheme } from '../utils/theme';
+      
+      // Gérer le changement de thème
+      document.querySelector('[data-switch-theme]')?.addEventListener('click', () => {
+        const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+      });
+    </script>
   </body>
 </html>

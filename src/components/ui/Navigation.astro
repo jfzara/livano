@@ -1,18 +1,18 @@
 ---
 const links = [
-  { href: '#', text: 'Home' },
-  { href: '#solutions', text: 'Solutions' },
-  { href: '#services', text: 'Services' },
-  { href: '#features', text: 'Features' },
-  { href: '#faq', text: 'About us' }
+  { href: '#', text: 'Lorem' },
+  { href: '#solutions', text: 'Ipsum' },
+  { href: '#services', text: 'Dolor' },
+  { href: '#features', text: 'Sit' },
+  { href: '#faq', text: 'Amet' }
 ];
 ---
 
-<div data-navbar class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 bg-body lg:bg-transparent border-x border-x-box-border lg:border-x-0">
-  <ul class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center">
+<div data-navbar class="flex h-0 overflow-hidden lg:!h-auto lg:scale-y-100 duration-300 ease-linear flex-col gap-y-6 gap-x-4 lg:flex-row w-full lg:justify-between lg:items-center absolute lg:relative top-full lg:top-0 lg:bg-transparent border-x border-x-box-border lg:border-x-0 dark:bg-transparent">
+  <ul class="border-t border-box-border lg:border-t-0 px-6 lg:px-0 pt-6 lg:pt-0 flex flex-col lg:flex-row gap-y-4 gap-x-3 text-lg text-heading-2 w-full lg:justify-center lg:items-center backdrop-blur-sm lg:backdrop-blur-none">
     {links.map(link => (
       <li>
-        <a href={link.href} class="duration-300 font-medium ease-linear hover:text-primary py-3">
+        <a href={link.href} class="duration-300 font-medium ease-linear hover:text-primary py-3 dark:text-gray-200 dark:hover:text-primary">
           {link.text}
         </a>
       </li>
@@ -24,7 +24,7 @@ const links = [
       after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
       bg-primary border-transparent relative after:bg-[#172554] hover:border-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] flex justify-center w-full sm:w-max">
       <span class="relative text-white z-10">
-        Get Started
+        Lorem Ipsum
       </span>
     </a>
   </div>
