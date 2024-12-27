@@ -1,35 +1,21 @@
 ---
 interface Props {
+  href: string;
   variant?: 'primary' | 'outline';
-  href?: string;
-  class?: string;
 }
 
-const { 
-  variant = 'primary',
-  href,
-  class: className 
-} = Astro.props;
-
-const baseStyles = "relative flex justify-center overflow-hidden px-6 py-3 rounded-full font-medium transition-all duration-300";
-const variants = {
-  primary: "bg-primary text-white hover:border-[#172554] hover:after:opacity-100 hover:after:scale-[2.5]",
-  outline: "border-2 border-primary text-primary hover:bg-primary hover:text-white"
-};
-
-const Tag = href ? 'a' : 'button';
+const { href, variant = 'primary' } = Astro.props;
 ---
 
-<Tag 
-  href={href} 
+<a
+  href={href}
   class:list={[
-    baseStyles,
-    variants[variant],
-    className
+    'px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear',
+    {
+      'bg-primary border-transparent text-white hover:border-[#172554] hover:after:opacity-100 hover:after:scale-[2.5]': variant === 'primary',
+      'border-heading-2 hover:border-primary hover:text-primary dark:border-gray-200 dark:text-gray-200 dark:hover:text-primary': variant === 'outline'
+    }
   ]}
 >
-  <span class="relative z-[5]">
-    <slot />
-  </span>
-  <span class="absolute inset-0 w-full h-full bg-[#172554] opacity-0 scale-0 transition-all duration-300 rounded-full"></span>
-</Tag>
+  <slot />
+</a>

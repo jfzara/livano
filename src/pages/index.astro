@@ -1,10 +1,77 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/sections/Hero.astro';
-import Services from '../components/sections/Services.astro';
+import { Hero } from '../components/sections/Hero';
+import { Services } from '../components/sections/Services';
+import { Stats } from '../components/sections/Stats';
 ---
 
-<Layout title="Livano - Agence de développement web">
-  <Hero />
-  <Services />
+<Layout title="Lorem Ipsum">
+  <section class="relative pt-32 lg:pt-36 py-10 md:py-16">
+    <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12">
+      <div class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2">
+        <h1 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight font-bold text-heading-1 dark:text-white">
+          Lorem ipsum
+          <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">
+            Dolor <br> Sit Amet
+          </span>
+          Consectetur
+        </h1>
+        <p class="md:text-lg text-heading-3 dark:text-gray-200 mt-8">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+        </p>
+        <div class="mt-16 w-full flex flex-col">
+          <div class="lg:mx-auto mb-5">
+            <button class="px-6 py-3 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
+              after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554]
+              bg-primary border-transparent relative after:bg-[#172554] hover:border-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] min-w-max text-white">
+              <span class="flex relative z-[5] text-center">Lorem Ipsum Dolor</span>
+            </button>
+          </div>
+          <div class="mx-auto">
+            <section class="relative flex flex-col md:flex-row gap-2 lg:gap-5 text-heading-3 dark:text-gray-200 font-medium">
+              <div class="flex items-center mx-auto">
+                <span class="font-bold rounded-full w-8 h-8 mr-2 text-primary inline-flex justify-center items-center">✓</span>
+                <div>Lorem Ipsum</div>
+              </div>
+              <div class="flex items-center mx-auto">
+                <span class="font-bold rounded-full w-8 h-8 mr-2 text-primary inline-flex justify-center items-center">✓</span>
+                Dolor Sit Amet
+              </div>
+              <div class="flex items-center mx-auto">
+                <span class="font-bold w-8 h-8 mr-3 text-primary inline-flex justify-center items-center">✓</span>
+                Consectetur
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+        <img src="/images/hero.webp" alt="Hero image" class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96" width="2350" height="2359" loading="lazy" decoding="async">
+      </div>
+    </div>
+    <section class="relative mt-12 md:mt-16">
+      <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5">
+        <div class="mx-auto lg:mx-0 p-5 sm:p-6 py-6 sm:py-8 max-w-5xl rounded-3xl bg-box-bg hover:bg-slate-200 dark:bg-gray-800 dark:hover:bg-slate-700 border border-box-border shadow-lg shadow-box-shadow md:divide-x divide-box-border grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-6 lg:gap-12">
+          <div class="text-center">
+            <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 dark:text-white">12+</h2>
+            <p class="mt-2 text-heading-3 dark:text-gray-200">Lorem ipsum</p>
+          </div>
+          <div class="text-center">
+            <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 dark:text-white">200+</h2>
+            <p class="mt-2 text-heading-3 dark:text-gray-200">Dolor sit</p>
+          </div>
+          <div class="text-center">
+            <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 dark:text-white">120</h2>
+            <p class="mt-2 text-heading-3 dark:text-gray-200">Amet</p>
+          </div>
+          <div class="text-center">
+            <h2 class="font-semibold text-xl sm:text-2xl md:text-4xl text-heading-1 dark:text-white">5+</h2>
+            <p class="mt-2 text-heading-3 dark:text-gray-200">Consectetur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+  <Hero client:load />
+  <Services client:load />
 </Layout>
