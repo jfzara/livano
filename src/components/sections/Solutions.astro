@@ -15,7 +15,7 @@ const solutions: Solution[] = [
     subtitle: "Your brand is drowning in the vast sea of social media, struggling to be seen by your target audience.",
     description: "It's disheartening when your carefully crafted content goes unnoticed. Your potential customers are out there, but they simply can't find you amidst the digital noise.",
     impact: "Our targeted visibility strategies cut through the clutter, ensuring your brand is not just seen but remembered. Watch our video to see how we make your presence impossible to ignore.",
-    imageSrc: "/images/visibility-dilemma.webp",
+    imageSrc: "/src/assets/images/ImageChateau.webp",
     bgClass: "bg-orange-100 dark:bg-gray-800"
   },
   {
@@ -23,14 +23,14 @@ const solutions: Solution[] = [
     subtitle: "Despite your efforts, audience engagement remains lackluster, and interactions are not translating into meaningful connections.",
     description: "It's frustrating to see competitors effortlessly engaging their audience while your brand struggles to spark conversations. Your content deserves better results, and we have the solution.",
     impact: "Our proven engagement tactics ignite conversations, turning passive viewers into active participants. Explore how we bridge the engagement gap in our video walkthrough.",
-    imageSrc: "/images/engagement-gap.webp"
+    imageSrc: "/src/assets/images/ImageFoule.webp"
   },
   {
     title: "Results in Hibernation",
     subtitle: "Your social media efforts aren't translating into tangible results, leaving you wondering if your investment is paying off.",
     description: "It's disheartening when the metrics show little growth or impact. Your time and resources are valuable, and it's time to break free from the cycle of stagnant results.",
     impact: "Our data-driven approach ensures every action is purposeful, yielding measurable results. Dive into our video guide to witness how we turn social media activities into a powerful engine for your brand's success.",
-    imageSrc: "/images/results-in-hibernation.webp",
+    imageSrc: "/src/assets/images/ImageAthlete.webp",
     reverse: true,
     bgClass: "bg-orange-100 dark:bg-gray-800"
   }
@@ -39,30 +39,30 @@ const solutions: Solution[] = [
 
 <section id="solutions" class="flex flex-col pt-10 md:pt-16">
   {solutions.map((solution, index) => (
-    <div class={`w-100 py-10 md:py-16 ${solution.bgClass || 'bg-transparent'}`}>
-      <div class={`flex flex-col gap-10 lg:gap-12 ${index % 2 === 0 ? 'midmd:flex-row-reverse' : 'midmd:flex-row'} mx-auto max-w-7xl w-full`}>
-        <div class="max-w-md mx-auto w-11/12 flex-1 flex midmd:w-7/12 lg:w-1/2 flex-col">
-          <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl dark:text-white">
-            <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">
-              {solution.title}
-            </span>
-          </h1>
-          <p class="md:text-lg text-heading-3 mt-8 font-medium text:lg md:text-2xl dark:text-gray-200">
-            {solution.subtitle}
-          </p>
-          <p class="md:text-lg text-heading-3 mt-3 dark:text-gray-300">
-            {solution.description}
-          </p>
-          <p class="md:text-lg text-heading-3 mt-3 font-medium dark:text-gray-200">
-            {solution.impact}
-          </p>
-        </div>
-        <div class="max-w-md mx-auto midmd:max-w-none lg:mx-0 lg:pr-10 xl:pr-2 flex-1 flex w-11/12 midmd:w-5/12 lg:w-1/2 midmd:h-auto">
-          <div class="w-full h-80 sm:h-96 midmd:h-full relative">
+    <div class={`w-full py-10 md:py-16 ${solution.bgClass || 'bg-transparent'}`}>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class={`flex flex-row items-center gap-8 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+          <div class="flex-1 min-w-0">
+            <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl dark:text-white">
+              <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">
+                {solution.title}
+              </span>
+            </h1>
+            <p class="md:text-lg text-heading-3 mt-4 font-medium text:lg md:text-2xl dark:text-gray-200">
+              {solution.subtitle}
+            </p>
+            <p class="md:text-lg text-heading-3 mt-3 dark:text-gray-300">
+              {solution.description}
+            </p>
+            <p class="md:text-lg text-heading-3 mt-3 font-medium dark:text-gray-200">
+              {solution.impact}
+            </p>
+          </div>
+          <div class="flex-1 min-w-0">
             <img
               src={solution.imageSrc}
               alt={`${solution.title} illustration`}
-              class="w-auto left-1/2 -translate-x-1/2 absolute bottom-0 max-h-full rounded-3xl object-cover"
+              class="w-full h-auto rounded-3xl object-cover"
               width="1240"
               height="1385"
               loading="lazy"

@@ -11,8 +11,8 @@ export default {
         'heading-1': 'rgb(var(--heading-1) / <alpha-value>)',
         'heading-2': 'rgb(var(--heading-2) / <alpha-value>)',
         'heading-3': 'rgb(var(--heading-3) / <alpha-value>)',
-        primary: '#1d4ed8', // Changé de #17CF97 à #1d4ed8 (bleu)
-        secondary: '#1e40af' // Bleu plus foncé pour le hover
+        primary: '#1d4ed8',  
+        secondary: '#1e40af'  
       },
       fontFamily: {
         sans: ['Raleway', 'sans-serif'],
