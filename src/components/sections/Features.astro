@@ -1,0 +1,36 @@
+---
+const features = [
+  "Advanced Analytics",
+  "Targeted Ad Campaigns", 
+  "Content Calendar Management",
+  "Influencer Collaborations",
+  "Customized Reporting",
+  "A/B Testing",
+  "Social Listening",
+  "Trend Analysis",
+  "24/7 Customer Support",
+  "Cross-Platform Integration",
+  "Dynamic Content Personalization",
+  "Competitor Analysis"
+];
+---
+
+<section id="features" class="py-10 md:py-16">
+  <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 md:px-14 lg:px-5">
+    <div class="text-center max-w-3xl mx-auto">
+      <h1 class="text-heading-1 font-semibold text-2xl sm:text-3xl md:text-4xl dark:text-white">
+        We provide <span class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600">Important<br>Features</span> for Digital Marketing
+      </h1>
+    </div>
+    <div class="flex flex-wrap gap-4 mt-12">
+      {features.map(feature => (
+        <div class="flex items-center text-heading-3 font-medium basis-full md:basis-[calc(50%-1rem)] lg:basis-[calc(33.333%-1rem)] dark:text-white">
+          <span class="font-bold rounded-full w-8 h-8 mr-3 text-primary inline-flex justify-center items-center dark:text-white">
+            ✓
+          </span>
+          {feature}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
