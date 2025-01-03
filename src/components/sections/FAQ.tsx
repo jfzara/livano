@@ -13,7 +13,7 @@ export function FAQ() {
         <div className="grid border rounded-3xl border-box-border border-box-bg bg-box-bg shadow-lg divide-y divide-slate-200 dark:divide-slate-800 max-w-3xl mx-auto mt-8 overflow-hidden">
           {faqs.map((faq, index) => (
             <details key={index} className="group py-5 px-5 hover:bg-slate-200 dark:hover:bg-slate-800">
-              <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-heading-1">
+              <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-heading-1 dark:text-white">
                 <span>{faq.question}</span>
                 <span className="transition group-open:rotate-180">
                   <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24">
@@ -21,7 +21,7 @@ export function FAQ() {
                   </svg>
                 </span>
               </summary>
-              <p className="md:text-lg text-heading-3 mt-3 group-open:animate-fadeIn">
+              <p className="md:text-lg text-heading-3 dark:text-white mt-3 group-open:animate-fadeIn">
                 {faq.answer}
               </p>
             </details>
