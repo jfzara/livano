@@ -15,5 +15,33 @@ export const brands: Brand[] = [
   {
     name: "PayPal",
     logo: ImagePaypal
+  },
+  {
+    name: "Spotify",
+    logo: ImageSpotify
+  },
+  {
+    name: "Slack", 
+    logo: ImageSlack
+  },
+  {
+    name: "PayPal",
+    logo: ImagePaypal
+  },
+  {
+    name: "PayPal",
+    logo: ImagePaypal
+  },
+  {
+    name: "Spotify",
+    logo: ImageSpotify
+  },
+  {
+    name: "Slack", 
+    logo: ImageSlack
+  },
+  {
+    name: "PayPal",
+    logo: ImagePaypal
   }
 ] as const;
